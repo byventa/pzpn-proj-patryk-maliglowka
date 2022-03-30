@@ -1,0 +1,37 @@
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+  <!-- Name -->
+  <input-c
+    formControlName="name"
+    [name]="'name'"
+    [label]="'Enter your name:'"
+    [type]="'text'"
+    ngDefaultControl
+  ></input-c>
+  <!-- DateOfBirth -->
+  <input-c
+    formControlName="dateOfBirth"
+    [name]="'dateOfBirth'"
+    [label]="'Enter your date of birth:'"
+    [type]="'date'"
+    ngDefaultControl
+  ></input-c>
+  <!-- SocialSecurityNumber -->
+  <input-c
+    formControlName="socialSecurityNumber"
+    [name]="'socialSecurityNumber'"
+    [label]="'Enter your social security number:'"
+    [type]="'text'"
+    ngDefaultControl
+  ></input-c>
+  <!-- Sex -->
+  <input-c
+    formControlName="sex"
+    [name]="'sex'"
+    [label]="'Enter your sex:'"
+    [type]="'text'"
+    ngDefaultControl
+  ></input-c>
+  <button type="submit">Submit</button>
+</form>
+
+{{ formValues | arrayJoin }}
